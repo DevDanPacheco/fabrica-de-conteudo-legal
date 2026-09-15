@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade - Fábrica de Conteúdo</title>
+<style>
+  :root{
+    --bg:#FAFAF7;
+    --surface:#F1EFE9;
+    --surface-line:#E4E1D8;
+    --ink:#1D1B17;
+    --ink-muted:#615D53;
+    --ink-faint:#8B8779;
+    --accent:#2B6E63;
+    --border:#DEDACE;
+    --mono-bg:#EDEAE1;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14161A;
+      --surface:#1B1E22;
+      --surface-line:#262A2F;
+      --ink:#ECEAE3;
+      --ink-muted:#A7A399;
+      --ink-faint:#726E64;
+      --accent:#63C2B0;
+      --border:#2B2F34;
+      --mono-bg:#20242A;
+    }
+  }
+  * { box-sizing: border-box; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.65;
+    margin: 0;
+    padding: 56px 20px;
+  }
+  .doc{ max-width: 680px; margin-inline: auto; }
+  h1{ font-size: 2.1rem; margin: 0 0 8px; }
+  h2{ font-size: 1.15rem; margin: 0 0 12px; }
+  .eyebrow{
+    font-family: ui-monospace, monospace;
+    font-size: .72rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+  .subtitle{ color: var(--ink-muted); margin: 0 0 6px; }
+  .meta{
+    font-family: ui-monospace, monospace;
+    font-size: .78rem;
+    color: var(--ink-faint);
+    margin: 20px 0 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+  .meta span{ display:block; margin-bottom: 4px; }
+  section{ margin-bottom: 30px; }
+  p{ margin: 0 0 12px; }
+  code{
+    font-family: ui-monospace, monospace;
+    font-size: .85em;
+    background: var(--mono-bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: .1em .4em;
+  }
+  .card{
+    background: var(--surface);
+    border: 1px solid var(--surface-line);
+    border-radius: 10px;
+    padding: 16px 20px;
+  }
+  a{ color: var(--accent); }
+  footer{
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--ink-faint);
+    font-size: .85rem;
+  }
+</style>
+</head>
+<body>
+<div class="doc">
+  <div class="eyebrow">Documento legal</div>
+  <h1>Política de Privacidade</h1>
+  <p class="subtitle">Fábrica de Conteúdo — automação pessoal de publicação de vídeos</p>
+  <div class="meta">
+    <span><strong>Responsável:</strong> Daniel Pacheco</span>
+    <span><strong>Última atualização:</strong> 15 de setembro de 2026</span>
+    <span><strong>Contato:</strong> danpereirapacheco@gmail.com</span>
+  </div>
+
+  <section>
+    <h2>1. O que é este app</h2>
+    <p>
+      Fábrica de Conteúdo é uma ferramenta de uso pessoal, desenvolvida e operada por Daniel Pacheco,
+      que automatiza a publicação de vídeos em canais do YouTube de propriedade do próprio desenvolvedor.
+      O app não é distribuído ao público: ele se conecta apenas às contas Google que o desenvolvedor
+      autoriza explicitamente, para fins de produção de conteúdo próprio.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. Dados acessados</h2>
+    <p>Para publicar vídeos automaticamente, o app solicita, via OAuth do Google, permissão para:</p>
+    <div class="card">
+      <p><code>youtube.upload</code> — enviar e gerenciar vídeos no canal autorizado</p>
+      <p style="margin-bottom:0"><code>youtube.readonly</code> — ler metadados básicos do canal (nome, status do vídeo enviado)</p>
+    </div>
+    <p style="margin-top:12px">
+      O app não acessa e-mails, contatos, arquivos do Drive, histórico de navegação ou qualquer outro
+      dado da Conta Google além do estritamente necessário para publicar vídeos no canal conectado.
+    </p>
+  </section>
+
+  <section>
+    <h2>3. Como os dados são usados</h2>
+    <p>
+      Os tokens de acesso obtidos via OAuth são usados exclusivamente para autenticar chamadas à
+      YouTube Data API a partir do próprio sistema de automação do desenvolvedor. Os vídeos, títulos,
+      descrições e miniaturas enviados são gerados pelo próprio Daniel como parte do seu fluxo de
+      produção de conteúdo — o app não coleta nem processa dados de terceiros.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Compartilhamento com terceiros</h2>
+    <p>
+      Nenhum dado obtido através deste app é vendido, alugado ou compartilhado com terceiros.
+      Os tokens de acesso e metadados de publicação permanecem em infraestrutura controlada pelo
+      próprio desenvolvedor.
+    </p>
+  </section>
+
+  <section>
+    <h2>5. Armazenamento e retenção</h2>
+    <p>
+      Tokens de acesso e atualização (refresh tokens) ficam armazenados de forma segura no ambiente
+      de automação do desenvolvedor enquanto a integração estiver em uso. Eles podem ser apagados a
+      qualquer momento pelo desenvolvedor e revogados pelo titular da conta a qualquer momento em
+      <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>6. Contato</h2>
+    <p>
+      Dúvidas sobre esta política ou sobre o uso de dados por este app podem ser enviadas para
+      <a href="mailto:danpereirapacheco@gmail.com">danpereirapacheco@gmail.com</a>.
+    </p>
+  </section>
+
+  <footer>
+    Fábrica de Conteúdo — documento de uso pessoal, não distribuído ao público.
+  </footer>
+</div>
+</body>
+</html>
